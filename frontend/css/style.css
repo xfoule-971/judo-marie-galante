@@ -1,6 +1,7 @@
+
+
 body {
-    padding-top: 1em;
-    margin: 0;
+    padding-top: 2em;
     font-family: Arial, sans-serif;
 }
 
@@ -9,6 +10,9 @@ body {
 }
 
 /*page d'accueil*/
+main {
+    flex-direction: column;
+}
 .hero{
     background-image: url("../assets/images/hero-bg.jpg");
     background-position: center;
@@ -31,4 +35,37 @@ body {
     color: black;
     font-weight: bold;
 }
+.image {
+    width: 35em;
+}
+.martial-art {
+    margin-left: 10em;
+}
+.martial-art__title {
+    font-weight: bolder;
+}
+.martial-art__para {
+    width: 40em;
+}
 
+/*footer*/
+footer {
+    background-color: black;
+}
+
+@media screen and (max-width: 768px) {
+    .martial {
+        width: 100%;
+        flex-direction: column;
+        display: flex;
+    }
+    .martial-art {
+        margin-left: 3.5em
+    }
+    .martial-art__para {
+        width: 15em;
+    }
+    .image {
+        width: 25em;
+    }
+}
