@@ -8,11 +8,12 @@ body {
 .navigation {
     background-color: black;
 }
+main {
+    margin: 0 auto;
+    width: 90%;
+}
 
 /*page d'accueil*/
-main {
-    flex-direction: column;
-}
 .hero{
     background-image: url("../assets/images/hero-bg.jpg");
     background-position: center;
@@ -24,28 +25,30 @@ main {
     justify-content: flex-start;
     align-items: center;
 }
-.hero__title{
-    font-size: 2em;
+.hero__title {
+    max-width: 900px;
 }
-.hero__title-first{
-    color: green;
-    font-weight: bolder;
+.hero__text {
+    max-width: 900px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: justify;
 }
-.hero__title-two{
-    color: black;
-    font-weight: bold;
+
+/**/
+.banner{
+    background-image: url("../assets/images/hero2-bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.image {
-    width: 35em;
-}
-.martial-art {
-    margin-left: 10em;
-}
-.martial-art__title {
-    font-weight: bolder;
-}
-.martial-art__para {
-    width: 40em;
+.banner__text{
+    text-align: justify;
 }
 
 /*footer*/
@@ -53,19 +56,3 @@ footer {
     background-color: black;
 }
 
-@media screen and (max-width: 768px) {
-    .martial {
-        width: 100%;
-        flex-direction: column;
-        display: flex;
-    }
-    .martial-art {
-        margin-left: 3.5em
-    }
-    .martial-art__para {
-        width: 15em;
-    }
-    .image {
-        width: 25em;
-    }
-}
