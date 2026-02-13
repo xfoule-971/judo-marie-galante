@@ -35,7 +35,7 @@ main {
     text-align: justify;
 }
 
-/**/
+/*toutes les pages sauf accueil*/
 .banner{
     background-image: url("../assets/images/hero2-bg.jpg");
     background-position: center;
@@ -50,6 +50,8 @@ main {
 .banner__text{
     text-align: justify;
 }
+/*page disciplines*/
+
 
 /*footer*/
 footer {
