@@ -50,11 +50,39 @@ main {
 .banner__text{
     text-align: justify;
 }
-/*page disciplines*/
-
+/*page actu*/
+/* Desktop normal */
+.saison__table {
+    width: 100%;
+}
 
 /*footer*/
 footer {
     background-color: black;
 }
 
+/* Mobile */
+@media (max-width: 768px) {
+
+    .saison__table {
+        font-size: 0.75rem; /* réduit légèrement la taille */
+    }
+
+    th, td {
+        padding: 0.4rem;
+    }
+
+    thead {
+        font-size: 0.7rem;
+    }
+
+    td:first-child {
+        font-weight: bold;
+        white-space: nowrap; /* évite que le mois casse sur 2 lignes */
+    }
+
+    td {
+        word-break: break-word; /* permet aux textes longs de passer à la ligne */
+    }
+
+}
