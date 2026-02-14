@@ -4,7 +4,9 @@ document.getElementById("contactForm")
 
   const formData = {
     name: e.target.name.value,
+    firstname: e.target.firstname.value,
     email: e.target.email.value,
+    request: e.target.request.value,
     message: e.target.message.value
   };
 
