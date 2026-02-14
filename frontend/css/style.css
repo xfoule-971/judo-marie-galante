@@ -55,6 +55,15 @@ main {
 .saison__table {
     width: 100%;
 }
+/*les survols*/
+.survol-link:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
+.survol-contact:hover {
+    cursor: pointer;
+    background-color: green;
+}
 
 /*footer*/
 footer {
