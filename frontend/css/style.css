@@ -50,11 +50,17 @@ main {
 .banner__text{
     text-align: justify;
 }
+
 /*page actu*/
 /* Desktop normal */
 .saison__table {
     width: 100%;
 }
+/**/
+.infos {
+    margin-top: 7em;
+}
+
 /*les survols*/
 .survol-link:hover {
     cursor: pointer;
@@ -63,6 +69,23 @@ main {
 .survol-contact:hover {
     cursor: pointer;
     background-color: green;
+}
+.survol-foot {
+    position: relative;
+}
+.survol-foot::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    background-color: currentColor;
+    transition: width 0.3s ease;
+}
+
+.survol-foot:hover::after {
+    width: 100%;
 }
 
 /*footer*/
@@ -93,5 +116,5 @@ footer {
     td {
         word-break: break-word; /* permet aux textes longs de passer à la ligne */
     }
-
+    
 }
