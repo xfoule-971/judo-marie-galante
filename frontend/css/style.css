@@ -116,5 +116,7 @@ footer {
     td {
         word-break: break-word; /* permet aux textes longs de passer à la ligne */
     }
-    
+    .hammer {
+        width: 23em;
+    }
 }
