@@ -10,11 +10,11 @@ body {
 }
 main {
     margin: 0 auto;
-    width: 90%;
 }
 
 /*page d'accueil*/
-.hero{
+.hero {
+    position: relative;
     background-image: url("../assets/images/hero-bg.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -22,21 +22,46 @@ main {
     width: 100%;
     height: 100vh;
     display: flex;
-    justify-content: flex-start;
     align-items: center;
+    overflow: hidden;
 }
+
+/* OVERLAY SOMBRE */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.45),
+        rgba(0, 0, 0, 0.45)
+    );
+    z-index: 1;
+}
+
+/* CONTENU AU-DESSUS */
 .hero__title {
-    max-width: 900px;
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
 }
+
 .hero__text {
+    position: relative;
+    z-index: 2;
     max-width: 900px;
     font-size: 1.1rem;
     line-height: 1.6;
     text-align: justify;
 }
+/*mise en page des textes*/
+.justif-text{
+    text-align: justify;
+}
 
 /*toutes les pages sauf accueil*/
-.banner{
+.banner {
+    position: relative;
     background-image: url("../assets/images/hero2-bg.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -47,8 +72,21 @@ main {
     justify-content: center;
     align-items: center;
 }
-.banner__text{
-    text-align: justify;
+
+/* OVERLAY EXACTEMENT À LA TAILLE */
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+/* CONTENU AU-DESSUS */
+.banner > * {
+    position: relative;
+    z-index: 1;
 }
 
 /*page actu*/
@@ -56,7 +94,112 @@ main {
 .saison__table {
     width: 100%;
 }
-/**/
+/*images de fond*/
+.zen {
+    background-image: url('../assets/images/budo.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.zens {
+    background-image: url('../assets/images/black-belt.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+/*page disciplines*/
+/*judo*/
+.bgjudo {
+    position: relative;
+    background-image: url("../assets/images/judo.jpg"); /* ton image */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+/* OVERLAY EXACTEMENT À LA TAILLE */
+.bgjudo::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55); /* intensité overlay */
+    z-index: 1;
+}
+/* CONTENU AU-DESSUS */
+.bgjudo > * {
+    position: relative;
+    z-index: 2;
+}
+
+/*jujitsu*/
+.bgjujitsu {
+    position: relative;
+    background-image: url("../assets/images/jujitsu.jpg"); /* ton image */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+/* OVERLAY EXACTEMENT À LA TAILLE */
+.bgjujitsu::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55); /* intensité overlay */
+    z-index: 1;
+}
+/* CONTENU AU-DESSUS */
+.bgjujitsu > * {
+    position: relative;
+    z-index: 2;
+}
+
+/*taïso*/
+.bgtaïso {
+    position: relative;
+    background-image: url("../assets/images/taïso.jpg"); /* ton image */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+/* OVERLAY EXACTEMENT À LA TAILLE */
+.bgtaïso::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55); /* intensité overlay */
+    z-index: 1;
+}
+/* CONTENU AU-DESSUS */
+.bgtaïso > * {
+    position: relative;
+    z-index: 2;
+}
+
+/*self-defense*/
+.bgself-defense {
+    position: relative;
+    background-image: url("../assets/images/self-defense.jpg"); /* ton image */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+/* OVERLAY EXACTEMENT À LA TAILLE */
+.bgself-defense::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55); /* intensité overlay */
+    z-index: 1;
+}
+/* CONTENU AU-DESSUS */
+.bgself-defense > * {
+    position: relative;
+    z-index: 2;
+}
+
+/*pages infos légales*/
 .infos {
     margin-top: 7em;
 }
@@ -83,10 +226,16 @@ main {
     background-color: currentColor;
     transition: width 0.3s ease;
 }
-
 .survol-foot:hover::after {
     width: 100%;
 }
+.icon-style:hover img {
+    transform: scale(1.3);
+}
+.bout-style:hover {
+    background-color: green;
+}
+
 
 /*footer*/
 footer {

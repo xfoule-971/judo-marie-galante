@@ -79,28 +79,28 @@
 
 </header>
 
-<main>
-    <section class="container py-5">
+<main class="zen">
+    <section class="container p-5">
         <h2 class="text-center fw-bold mb-5 text-success">
             Calendrier Sportif 2025 / 2026
         </h2>
 
-        <div class="saison">
-            <table class="table table-bordered table-hover text-center align-middle saison__table">
+        <div class="table-responsive rounded" style="overflow-x: auto;">
+            <table class="table table-bordered table-hover text-center align-middle" style="min-width: 900px;">
                 <thead class="table-success">
                     <tr>
-                        <th>Mois</th>
-                        <th>Date</th>
-                        <th>Événement</th>
-                        <th>Lieu</th>
-                        <th>Catégorie</th>
+                        <th style="white-space: nowrap;">Mois</th>
+                        <th style="white-space: nowrap;">Date</th>
+                        <th style="white-space: nowrap;">Événement</th>
+                        <th style="white-space: nowrap;">Lieu</th>
+                        <th style="white-space: nowrap;">Catégorie</th>
                     </tr>
                 </thead>
                 <tbody>
 
                     <!-- SEPTEMBRE -->
                     <tr>
-                        <td rowspan="2" class="fw-bold align-middle">Sept 25</td>
+                        <td rowspan="2" class="fw-bold align-middle">Septembre 2025</td>
                         <td>14/09/2025</td>
                         <td>Forum des associations</td>
                         <td>Gymnase Municipal</td>
@@ -115,7 +115,7 @@
 
                     <!-- OCTOBRE -->
                     <tr>
-                        <td rowspan="2" class="fw-bold align-middle">Oct 25</td>
+                        <td rowspan="2" class="fw-bold align-middle">Octobre 2025</td>
                         <td>12/10/2025</td>
                         <td>Tournoi départemental</td>
                         <td>Ville X</td>
@@ -130,7 +130,7 @@
 
                     <!-- NOVEMBRE -->
                     <tr>
-                        <td class="fw-bold">Nov 25</td>
+                        <td class="fw-bold">Novembre 2025</td>
                         <td>16/11/2025</td>
                         <td>Championnat régional</td>
                         <td>Ville Y</td>
@@ -139,8 +139,17 @@
 
                     <!-- JANVIER -->
                     <tr>
-                        <td class="fw-bold">Janv 26</td>
+                        <td class="fw-bold">Janvier 2026</td>
                         <td>11/01/2026</td>
+                        <td>Tournoi amical</td>
+                        <td>Ville Z</td>
+                        <td>Tous niveaux</td>
+                    </tr>
+
+                    <!-- FEVRIER -->
+                    <tr>
+                        <td class="fw-bold">Février 2026</td>
+                        <td>11/02/2026</td>
                         <td>Tournoi amical</td>
                         <td>Ville Z</td>
                         <td>Tous niveaux</td>
@@ -149,6 +158,24 @@
                     <!-- MARS -->
                     <tr>
                         <td class="fw-bold">Mars 2026</td>
+                        <td>21/03/2026</td>
+                        <td>Stage technique</td>
+                        <td>Dojo principal</td>
+                        <td>Compétiteurs</td>
+                    </tr>
+
+                    <!-- AVRIL -->
+                    <tr>
+                        <td class="fw-bold">Avril 2026</td>
+                        <td>21/04/2026</td>
+                        <td>Stage technique</td>
+                        <td>Dojo principal</td>
+                        <td>Compétiteurs</td>
+                    </tr>
+
+                    <!-- MAI -->
+                    <tr>
+                        <td class="fw-bold">Mai 2026</td>
                         <td>21/03/2026</td>
                         <td>Stage technique</td>
                         <td>Dojo principal</td>
@@ -182,6 +209,7 @@
 
             <div class="col-md-3 mb-4">
                 <h4 class="mb-4">Menu</h4>
+                
                 <ul class="list-unstyled d-flex flex-column align-items-start">
                     <li>
                         <a href="./club.html" class="text-decoration-none text-success d-block mb-2 survol-foot">Le club</a>
@@ -206,12 +234,22 @@
 
             <div class="col-md-3 mb-4">
                 <h4 class="mb-4">Infos légales</h4>
+
                 <ul class="list-unstyled d-flex flex-column align-items-start">
                     <li>
-                        <a href="#" class="text-decoration-none text-success d-block mb-2 survol-foot">Politique de confidentialité</a>
+                        <a href="./confidence.html" class="text-decoration-none text-success d-block mb-2 survol-foot">Politique de confidentialité</a>
                     </li>
                     <li>
-                        <a href="#" class="text-decoration-none text-success d-block mb-2 survol-foot">Mentions légales</a>
+                        <a href="./mentions.html" class="text-decoration-none text-success d-block mb-2 survol-foot">Mentions légales</a>
+                    </li>
+                    <li>
+                        <a href="./liens.html" class="text-decoration-none text-success d-block mb-2 survol-foot">Liens utiles</a>
+                    </li>
+                    <li>
+                        <a href="./aides.html" class="text-decoration-none text-success d-block mb-2 survol-foot">Aides sociales - CCAS</a>
+                    </li>
+                    <li>
+                        <a href="./accident.html" class="text-decoration-none text-success d-block mb-2 survol-foot">Déclarer un accident</a>
                     </li>
                 </ul>
             </div>
@@ -220,22 +258,29 @@
                 <h4 class="mb-4">Nous contacter</h4>
                 
                 <div class="d-flex align-items-start mb-3">
-                    <img src="../assets/icons/green-loc.png" alt="icône" class="me-2 mt-1">
                     <a href="https://www.google.com/maps/place/15%C2%B058'46.1%22N+61%C2%B017'13.0%22W/@15.9794782,-61.2891188,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x7d4c6db49330f3d5!8m2!3d15.9794782!4d-61.2869301?hl=fr"
                     target="_blank"
-                    class="text-decoration-none text-success survol-foot">
+                    class="icon-style mx-2">
+                        <img src="../assets/icons/green-loc.png" alt="icône" class="me-2 mt-1">
+                    </a>
+                    
+                    <p class="text-decoration-none text-success">
                         Section CHERPIN MALÉTIE - 97134 SAINT-LOUIS MARIE GALANTE
-                    </a>
+                    </p>
+                  
                 </div>
-                <div class="d-flex align-items-center">
-                    <img src="../assets/icons/green-phone.png" alt="icône" class="me-2">
+                
+                <div class="d-flex align-items-start">
                     <a href="tel:+590690487573"
-                    class="text-decoration-none text-success survol-foot">
-                        0690 48 75 73
+                    class="icon-style mx-2">
+                        <img src="../assets/icons/green-phone.png" alt="icône" class="me-2">
                     </a>
+                    <p class="text-decoration-none text-success">
+                        0690 48 75 73
+                    </p>
                 </div>
             </div>
-
+        
         </div>
     </div>
 </footer>

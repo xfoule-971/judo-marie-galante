@@ -85,42 +85,58 @@
 
 </header>
 
-<main>
-
+<main class="zen">
     <!-- SECTION A PROPOS -->
-    <section class="container-fluid bg-secondary px-0">
-        <div class="row g-0 align-items-stretch text-center">
+    <section class="container-fluid p-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-xl-10"> <!-- plus large -->
 
-            <div class="col-md-6 d-flex text-align-center p-4">
-                <div>
-                    <h3 class="text-success text-center fw-bold my-3">L’AJM, une référence du judo marie-galantais depuis 1999</h3>
-                    
-                    <p class="banner__text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu venenatis ipsum. 
-                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, 
-                        per inceptos himenaeos. Nulla facilisi. Morbi suscipit hendrerit dui ut pharetra. 
-                        Nulla sapien justo, venenatis quis leo a, vulputate tristique orci. Sed tincidunt nec lacus sed ultricies. 
-                        Morbi dapibus leo vel neque pulvinar cursus. Etiam commodo congue felis nec consectetur. 
-                        In quis ex at turpis ultricies pharetra. Nulla ullamcorper arcu id feugiat aliquam. 
-                        Curabitur consequat posuere consequat. Phasellus varius pretium mattis. Nulla at turpis massa. 
-                        Phasellus nulla nibh, scelerisque vel feugiat a, elementum et odio. Mauris sed dignissim elit.
-                    </p>
-                    <p class="banner__text">
-                        Etiam commodo congue felis nec consectetur. In quis ex at turpis ultricies pharetra. 
-                        Nulla ullamcorper arcu id feugiat aliquam. Curabitur consequat posuere consequat. 
-                        Phasellus varius pretium mattis. Nulla at turpis massa. Phasellus nulla nibh, 
-                        scelerisque vel feugiat a, elementum et odio. Mauris sed dignissim elit.
-                    </p>
+                <div class="card shadow-lg overflow-hidden">
 
-                    <a href="./contact.html" class="btn btn-danger mt-3">
-                        En savoir plus
-                    </a>
+                    <div class="row g-0 align-items-stretch">
+
+                        <!-- TEXTE DROITE -->
+                        <div class="col-md-7 order-2 order-md-1">
+                            <div class="card-body bg-secondary text-white h-100 d-flex flex-column justify-content-center p-5">
+
+                                <h3 class="text-success text-center fw-bold my-3">L’AJM, une référence du judo marie-galantais depuis 1999</h3>
+
+                                <p class="justif-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eu venenatis ipsum. 
+                                    Class aptent taciti sociosqu ad litora torquent per conubia nostra, 
+                                    per inceptos himenaeos. Nulla facilisi. Morbi suscipit hendrerit dui ut pharetra. 
+                                    Nulla sapien justo, venenatis quis leo a, vulputate tristique orci. Sed tincidunt nec lacus sed ultricies. 
+                                    Morbi dapibus leo vel neque pulvinar cursus. Etiam commodo congue felis nec consectetur. 
+                                    In quis ex at turpis ultricies pharetra. Nulla ullamcorper arcu id feugiat aliquam. 
+                                    Curabitur consequat posuere consequat. Phasellus varius pretium mattis. Nulla at turpis massa. 
+                                    Phasellus nulla nibh, scelerisque vel feugiat a, elementum et odio. Mauris sed dignissim elit.
+                                </p>
+                                <p class="justif-text">
+                                    Etiam commodo congue felis nec consectetur. In quis ex at turpis ultricies pharetra. 
+                                    Nulla ullamcorper arcu id feugiat aliquam. Curabitur consequat posuere consequat. 
+                                    Phasellus varius pretium mattis. Nulla at turpis massa. Phasellus nulla nibh, 
+                                    scelerisque vel feugiat a, elementum et odio. Mauris sed dignissim elit.
+                                </p>
+                                <div class="text-center">
+                                    <a href="./contact.html"
+                                    class="btn btn-danger px-4 bout-style">
+                                        En savoir plus
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                        
+                        <!-- VIDEO GAUCHE -->
+                        <div class="col-md-5 order-1 order-md-2">
+                            <video class="img-fluid w-100 h-100 object-fit-cover" 
+                                src="../assets/videos/judo-video.mp4"  controls autoPlay muted loop>
+                            </video>
+                        </div>
+                    </div>
+
                 </div>
-            </div>
 
-            <!-- IMAGE -->
-            <div class="col-md-6">
-                <video class="img-fluid w-100 h-100 object-fit-cover" src="../assets/videos/judo-video.mp4"  controls autoPlay muted loop></video>
             </div>
         </div>
     </section>
@@ -131,64 +147,84 @@
     <div class="container">
         <div class="row text-success">
 
-            <div class="col-md-3 mb-4">
+            <div class="col-md-3 mb-4 pe-md-5">
                 <img src="../assets/images/logo-footer.png" style="width: 100%;">
             </div>
 
             <div class="col-md-3 mb-4">
                 <h4 class="mb-4">Menu</h4>
+                
                 <ul class="list-unstyled d-flex flex-column align-items-start">
                     <li>
-                        <a href="./pages/club.html" class="text-decoration-none text-success d-block mb-2 survol-link">Le club</a>
+                        <a href="./club.html" class="text-decoration-none text-success d-block mb-2 survol-foot">Le club</a>
                     </li>
                     <li>
-                        <a href="./pages/disciplines.html" class="text-decoration-none text-success d-block mb-2 survol-link">Les disciplines</a>
+                        <a href="./disciplines.html" class="text-decoration-none text-success d-block mb-2 survol-foot">Les disciplines</a>
                     </li>
                     <li>
-                        <a href="./pages/horaires.html" class="text-decoration-none text-success d-block mb-2 survol-link">Les horaires</a>
+                        <a href="./horaires.html" class="text-decoration-none text-success d-block mb-2 survol-foot">Les horaires</a>
                     </li>
                     <li>
-                        <a href="./pages/equipe.html" class="text-decoration-none text-success d-block mb-2 survol-link">L'équipe</a>
+                        <a href="./equipe.html" class="text-decoration-none text-success d-block mb-2 survol-foot">L'équipe</a>
                     </li>
                     <li>
-                        <a href="./pages/actu.html" class="text-decoration-none text-success d-block mb-2 survol-link">Actualités</a>
+                        <a href="./actu.html" class="text-decoration-none text-success d-block mb-2 survol-foot">Actualités</a>
                     </li>
                     <li>
-                        <a href="./pages/contact.html" class="text-decoration-none text-success d-block mb-2 survol-link">Contact</a>
+                        <a href="./contact.html" class="text-decoration-none text-success d-block mb-2 survol-foot">Contact</a>
                     </li>
                 </ul>
             </div>
 
             <div class="col-md-3 mb-4">
                 <h4 class="mb-4">Infos légales</h4>
+
                 <ul class="list-unstyled d-flex flex-column align-items-start">
                     <li>
-                        <a href="#" class="text-decoration-none text-success d-block mb-2 survol-link">Politique de confidentialité</a>
+                        <a href="./confidence.html" class="text-decoration-none text-success d-block mb-2 survol-foot">Politique de confidentialité</a>
                     </li>
                     <li>
-                        <a href="#" class="text-decoration-none text-success d-block mb-2 survol-link">Mentions légales</a>
+                        <a href="./mentions.html" class="text-decoration-none text-success d-block mb-2 survol-foot">Mentions légales</a>
+                    </li>
+                    <li>
+                        <a href="./liens.html" class="text-decoration-none text-success d-block mb-2 survol-foot">Liens utiles</a>
+                    </li>
+                    <li>
+                        <a href="./aides.html" class="text-decoration-none text-success d-block mb-2 survol-foot">Aides sociales - CCAS</a>
+                    </li>
+                    <li>
+                        <a href="./accident.html" class="text-decoration-none text-success d-block mb-2 survol-foot">Déclarer un accident</a>
                     </li>
                 </ul>
             </div>
 
             <div class="col-md-3 mb-4">
                 <h4 class="mb-4">Nous contacter</h4>
-                <ul class="list-unstyled d-flex flex-column align-items-start">
-                    <li>
-                        <a href="#" class="text-decoration-none text-success d-block mb-2 survol-link">
-                            <img src="../assets/icons/email-green.png" alt="icône" class="mx-2">
-                            cherpin971@gmail.com
-                        </a>
-                    </li>
-                    <li>
-                        <a href="tel:+590690487573" class="text-decoration-none text-success d-block mb-2 survol-link">
-                            <img src="../assets/icons/green-phone.png" alt="icône" class="mx-2">
-                            0690 48 75 73
-                        </a>
-                    </li>
-                </ul>
+                
+                <div class="d-flex align-items-start mb-3">
+                    <a href="https://www.google.com/maps/place/15%C2%B058'46.1%22N+61%C2%B017'13.0%22W/@15.9794782,-61.2891188,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x7d4c6db49330f3d5!8m2!3d15.9794782!4d-61.2869301?hl=fr"
+                    target="_blank"
+                    class="icon-style mx-2">
+                        <img src="../assets/icons/green-loc.png" alt="icône" class="me-2 mt-1">
+                    </a>
+                    
+                    <p class="text-decoration-none text-success">
+                        Section CHERPIN MALÉTIE - 97134 SAINT-LOUIS MARIE GALANTE
+                    </p>
+                  
+                </div>
+                
+                <div class="d-flex align-items-start">
+                    <a href="tel:+590690487573"
+                    class="icon-style mx-2">
+                        <img src="../assets/icons/green-phone.png" alt="icône" class="me-2">
+                    </a>
+                    <p class="text-decoration-none text-success">
+                        0690 48 75 73
+                    </p>
+                </div>
             </div>
-
+        
         </div>
     </div>
 </footer>
