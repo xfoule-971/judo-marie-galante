@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const form = document.getElementById("contactForm");
   const responseDiv = document.getElementById("response");
+  const API_URL = 'https://ajm.onrender.com';
 
   form.addEventListener("submit", async function (e) {
     e.preventDefault();
@@ -17,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch("${API_URL}/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData)
