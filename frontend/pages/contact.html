@@ -25,7 +25,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark px-5 fixed-top navigation">
 
         <a class="navbar-brand" href="../index.html">
-            <img src="../assets/images/logo.png" style="width: 4em;">
+            <img src="../assets/images/logo.png" alt="logo de l'AJM" style="width: 4em;">
         </a>
 
         <!-- TOGGLE -->
@@ -86,6 +86,9 @@
 <main class="zen">
     <section class="container-fluid py-5">
         <div class="container">
+
+            <h2 class="text-center text-success fw-bold mb-5">Vous voulez nous contacter?</h2>
+
             <div class="row justify-content-center gx-5 gy-4">
 
                 <!-- COLONNE 1 -->
@@ -148,10 +151,11 @@
                             
                             <div class="mb-3">
                                 <select class="form-control rounded-pill py-2" id="exampleFormControlSelect1" required>
-                                    <option>Judo</option>
-                                    <option>Jujitsu</option>
-                                    <option>Taïso</option>
-                                    <option>Self-défense</option>
+                                    <option value="" disabled selected>Choississez une discipline</option>
+                                    <option value="Judo">Judo</option>
+                                    <option value="Jujitsu">Jujitsu</option>
+                                    <option value="Taiso">Taïso</option>
+                                    <option value="Self-Defense">Self-défense</option>
                                 </select>
                             </div>
 
@@ -159,25 +163,25 @@
                                 <div class="col-md-6">
                                     <input type="text" name="name"
                                            class="form-control rounded-pill py-2"
-                                           placeholder="Votre nom" required />
+                                           placeholder="Votre nom" required>
                                 </div>
                                 <div class="col-md-6">
                                     <input type="text" name="firstname"
                                            class="form-control rounded-pill py-2"
-                                           placeholder="Votre prénom" required />
+                                           placeholder="Votre prénom" required>
                                 </div>
                             </div>
 
                             <div class="mb-3">
                                 <input type="email" name="email"
                                        class="form-control rounded-pill py-2"
-                                       placeholder="Votre email" required />
+                                       placeholder="Votre email" required>
                             </div>
 
                             <div class="mb-3">
                                 <input type="text" name="request"
                                        class="form-control rounded-pill py-2"
-                                       placeholder="Votre demande" required />
+                                       placeholder="Votre demande" required>
                             </div>
 
                             <div class="mb-4">
@@ -223,7 +227,7 @@
         <div class="row text-success">
 
             <div class="col-md-3 mb-4 pe-md-5">
-                <img src="../assets/images/logo-footer.png" style="width: 100%;">
+                <img src="../assets/images/logo-footer.png" alt="logo de l'AJM" style="width: 100%;">
             </div>
 
             <div class="col-md-3 mb-4">
