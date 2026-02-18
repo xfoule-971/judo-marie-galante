@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const form = document.getElementById("contactForm");
   const responseDiv = document.getElementById("response");
-  const API_URL = 'https://ajm.onrender.com';
+  const API_URL = 'https://ajm-judo.onrender.com';
 
   form.addEventListener("submit", async function (e) {
     e.preventDefault();
