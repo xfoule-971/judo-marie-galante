@@ -1,13 +1,21 @@
 import express from "express";
 import cors from "cors";
 import helmet from "helmet";
+import path from "path";
+import { fileURLToPath } from "url";
 import contactRoutes from "./routes/contactRoutes.js";
 import { env } from "./config/env.js";
 
 const app = express();
 
 /* =========================
-   Sécurité de base
+   Gestion __dirname (ESM)
+========================= */
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+/* =========================
+   Sécurité
 ========================= */
 app.use(helmet());
 
@@ -17,21 +25,18 @@ app.use(helmet());
 app.use(express.json());
 
 /* =========================
-   Configuration CORS propre
+   Configuration CORS
 ========================= */
 const allowedOrigins = [
-  env.frontendUrl,                 // production
-  "http://localhost:5500",         // Live Server
+  env.frontendUrl,
+  "http://localhost:5500",
   "http://127.0.0.1:5500",
-  "http://localhost:3000",         // si React
-  "http://localhost:4000"
+  "http://localhost:3000"
 ];
 
 app.use(
   cors({
     origin: function (origin, callback) {
-
-      // Autorise requêtes sans origine (Postman, serveur interne)
       if (!origin) return callback(null, true);
 
       if (allowedOrigins.includes(origin)) {
@@ -40,23 +45,36 @@ app.use(
         callback(new Error("Non autorisé par CORS"));
       }
     },
-    methods: ["POST"],
+    methods: ["GET", "POST"],
     credentials: true
   })
 );
 
 /* =========================
-   Route API
+   ROUTES API (AVANT STATIC)
 ========================= */
 app.use("/api/contact", contactRoutes);
 
 /* =========================
-   Gestion erreur globale
+   Servir le frontend
+========================= */
+app.use(express.static(path.join(__dirname, "../frontend")));
+
+/* =========================
+   Catch-all (APRÈS API)
+========================= */
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../frontend/index.html"));
+});
+
+/* =========================
+   Gestion erreurs globale
 ========================= */
 app.use((err, req, res, next) => {
-  console.error(err.message);
+  console.error("Erreur :", err.message);
   res.status(500).json({ message: "Erreur serveur" });
 });
 
 export default app;
+
 
