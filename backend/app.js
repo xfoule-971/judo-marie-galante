@@ -9,8 +9,6 @@ const app = express();
 // --- Sécurité de base ---
 app.use(helmet()); 
 
-// --- Parser JSON ---
-app.use(express.json()); 
 
 // --- Configuration CORS ---
 const allowedOrigins = [
@@ -36,17 +34,21 @@ app.use(
       }
     },
     methods: ["GET", "POST", "OPTIONS"],
-    credentials: true
+    credentials: true,
+    allowedHeaders: ["content-type", "Authorization"]
   })
 );
 
+// --- Parser JSON ---
+app.use(express.json()); 
 
 // --- Route API --- 
+app.use("/api/contact", contactRoutes);
+
 app.get("/", (req, res) =>{
   res.send('Serveur opérationnel')
 });
 
-app.use("/api/contact", contactRoutes);
 
 // --- Gestion erreur globale ---
 app.use((err, req, res, next) => { 
