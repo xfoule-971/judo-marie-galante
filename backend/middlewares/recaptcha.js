@@ -2,26 +2,34 @@ import axios from "axios";
 import { env } from "../config/env.js";
 
 export async function verifyRecaptcha(req, res, next) {
-  const token = req.body.recaptchaToken;
 
-  if (!token) {
-    return res.status(400).json({ error: "reCAPTCHA manquant" });
-  }
+  try {
+    const token = req.body.recaptchaToken;
 
-  const { data } = await axios.post(
-    `https://www.google.com/recaptcha/api/siteverify`,
-    null,
-    {
-      params: {
-        secret: env.recaptchaSecret,
-        response: token,
-      },
+    if (!token) {
+      return res.status(400).json({ error: "reCAPTCHA manquant" });
     }
-  );
 
-  if (!data.success) {
-    return res.status(403).json({ error: "reCAPTCHA invalide" });
+    const { data } = await axios.post(
+      "https://www.google.com/recaptcha/api/siteverify",
+      null,
+      {
+        params: {
+          secret: env.recaptchaSecret,
+          response: token,
+        },
+      }
+    );
+
+    if (!data.success) {
+      return res.status(403).json({ error: "reCAPTCHA invalide" });
+    }
+
+    next();
+
+  } catch (error) {
+    console.error("Erreur reCAPTCHA :", error.message);
+    return res.status(500).json({ error: "Erreur vérification reCAPTCHA" });
   }
-
-  next();
 }
+
