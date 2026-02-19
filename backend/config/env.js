@@ -14,3 +14,9 @@ export const env = {
   mailTo: process.env.MAIL_TO, 
   recaptchaSecret: process.env.RECAPTCHA_SECRET, 
 };
+
+console.log("verif smtp");
+console.log("Host;", env.smtp.host);
+console.log("User:", env.smtp.user);
+
+console.log("Pass chargé ?:", env.smtp.pass ? "Oui (16 caracteres)" : "Non (vide)");
