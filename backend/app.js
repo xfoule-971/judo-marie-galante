@@ -14,24 +14,32 @@ app.use(express.json());
 
 // --- Configuration CORS ---
 const allowedOrigins = [
-  env.frontendUrl, // production
+  env.frontendUrl,
+  "https://ajm-judoclub.onrender.com",
+  "http://localhost:5500",
+  "http://127.0.0.1:5500"
 ];
 
 app.use(
   cors({
-    origin: function (origin, callback){
+    origin: function (origin, callback) {
+
+      console.log("Origin reçue :", origin);
+
       if (!origin) return callback(null, true);
 
-      if (allowedOrigins.includes(origin)){
-        callback(null, true);
+      if (allowedOrigins.includes(origin)) {
+        return callback(null, true);
       } else {
-        callback(new Error("Non autorisé par CORS"));
+        console.log("Origin refusée :", origin);
+        return callback(new Error("Non autorisé par CORS"));
       }
     },
-    methods: ["POST", "GET"], 
+    methods: ["GET", "POST", "OPTIONS"],
     credentials: true
   })
 );
+
 
 // --- Route API --- 
 app.get("/", (req, res) =>{
