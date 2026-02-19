@@ -6,6 +6,10 @@ import { env } from "./config/env.js";
 
 const app = express(); 
 
+
+// IMPORTANT pour Render / proxy
+app.set("trust proxy", 1);
+
 // --- Sécurité de base ---
 app.use(helmet()); 
 
