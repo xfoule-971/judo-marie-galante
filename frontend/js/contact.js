@@ -18,11 +18,15 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     try {
-      const response = await fetch("${API_URL}/api/contact", {
+      const response = await fetch(`${API_URL}/api/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData)
       });
+
+      if(!response.ok) {
+        throw new Error(`Erreur serveur : ${response.status}`)
+      }
 
       const data = await response.json();
 
@@ -32,11 +36,11 @@ document.addEventListener("DOMContentLoaded", function () {
       form.reset();
 
     } catch (error) {
-      console.error(error);
+      console.error("Détails de l'erreur :", error);
       responseDiv.innerText = "Erreur lors de l'envoi.";
       responseDiv.classList.add("text-danger");
     }
-    
+
   });
 
 });
