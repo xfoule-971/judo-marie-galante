@@ -10,19 +10,10 @@ document.addEventListener("DOMContentLoaded", function () {
     responseDiv.innerText = "";
     responseDiv.className = "";
 
-    const recaptchaToken = grecaptcha.getResponse();
-
-    if (!recaptchaToken) {
-      responseDiv.innerText = "Veuillez valider le reCAPTCHA.";
-      responseDiv.classList.add("text-danger");
-      return;
-    }
-
     const formData = {
       name: form.name.value.trim(),
       email: form.email.value.trim(),
-      message: form.message.value.trim(),
-      recaptchaToken
+      message: form.message.value.trim()
     };
 
     try {
@@ -44,8 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
       responseDiv.classList.add("text-success");
 
       form.reset();
-      grecaptcha.reset();
-
+    
     } catch (error) {
       console.error("Erreur :", error);
       responseDiv.innerText = error.message || "Erreur lors de l'envoi.";
