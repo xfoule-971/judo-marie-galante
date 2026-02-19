@@ -150,7 +150,10 @@
                         <form id="contactForm">
                             
                             <div class="mb-3">
-                                <select class="form-control rounded-pill py-2" id="exampleFormControlSelect1" required>
+                                <select 
+                                class="form-control rounded-pill py-2" 
+                                id="exampleFormControlSelect1" 
+                                name="discipline" required>
                                     <option value="" disabled selected>Choississez une discipline</option>
                                     <option value="Judo">Judo</option>
                                     <option value="Jujitsu">Jujitsu</option>
@@ -161,41 +164,56 @@
 
                             <div class="row g-3 mb-3">
                                 <div class="col-md-6">
-                                    <input type="text" name="name"
-                                           class="form-control rounded-pill py-2"
-                                           placeholder="Votre nom" required>
+                                    <input 
+                                    type="text" 
+                                    name="name"
+                                    autocomplete="name"
+                                    class="form-control rounded-pill py-2"
+                                    placeholder="Votre nom" required>
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="text" name="firstname"
-                                           class="form-control rounded-pill py-2"
-                                           placeholder="Votre prénom" required>
+                                    <input 
+                                    type="text" 
+                                    name="firstname"
+                                    autocomplete="firstname"
+                                    class="form-control rounded-pill py-2"
+                                    placeholder="Votre prénom" required>
                                 </div>
                             </div>
 
                             <div class="mb-3">
-                                <input type="email" name="email"
-                                       class="form-control rounded-pill py-2"
-                                       placeholder="Votre email" required>
+                                <input 
+                                type="email" 
+                                name="email"
+                                autocomplete="email"
+                                class="form-control rounded-pill py-2"
+                                placeholder="Votre email" required>
                             </div>
 
                             <div class="mb-3">
-                                <input type="text" name="request"
-                                       class="form-control rounded-pill py-2"
-                                       placeholder="Votre demande" required>
+                                <input 
+                                type="text"
+                                name="request"
+                                autocomplete="off"
+                                class="form-control rounded-pill py-2"
+                                placeholder="Votre demande" required>
                             </div>
 
                             <div class="mb-4">
-                                <textarea name="message"
-                                          class="form-control rounded-5"
-                                          rows="7"
-                                          placeholder="Votre message"
-                                          required></textarea>
+                                <textarea 
+                                name="message"
+                                class="form-control rounded-5"
+                                rows="7"
+                                placeholder="Votre message"
+                                required></textarea>
                             </div>
 
                             <div class="form-check mb-4">
-                                <input type="checkbox"
-                                       class="form-check-input"
-                                       id="exampleCheck1">
+                                <input 
+                                type="checkbox"
+                                class="form-check-input"
+                                id="exampleCheck1">
+
                                 <label class="form-check-label" for="exampleCheck1">
                                     J'accepte d'être recontacté
                                 </label>
