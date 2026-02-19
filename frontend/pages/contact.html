@@ -167,7 +167,7 @@
                                     <input 
                                     type="text" 
                                     name="name"
-                                    autocomplete="name"
+                                    autocomplete="family-name"
                                     class="form-control rounded-pill py-2"
                                     placeholder="Votre nom" required>
                                 </div>
@@ -175,7 +175,7 @@
                                     <input 
                                     type="text" 
                                     name="firstname"
-                                    autocomplete="firstname"
+                                    autocomplete="given-name"
                                     class="form-control rounded-pill py-2"
                                     placeholder="Votre prénom" required>
                                 </div>
@@ -219,11 +219,6 @@
                                 </label>
                             </div>
 
-                            <!-- RECAPTCHA -->
-                            <div class="g-recaptcha mb-3"
-                                data-sitekey="6Le4d3AsAAAAAHRjyS0-FinS1hTWxz8NbAGTYK_X">
-                            </div>
-
                             <div class="text-center">
                                 <button type="submit"
                                         class="btn btn-danger rounded-pill px-5 fw-semibold w-100 bout-style">
@@ -233,7 +228,7 @@
 
                         </form>
 
-                        <div id="response" class="mt-3 text-center fw-semibold"></div>
+                        <div id="response" class="mt-3 text-center fw-semibold mx-2"></div>
 
                     </div>
                 </div>
@@ -330,7 +325,6 @@
     </div>
 </footer>
 
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script src="../js/contact.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 

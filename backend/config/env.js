@@ -12,7 +12,7 @@ export const env = {
   }, 
   
   mailTo: process.env.MAIL_TO, 
-  recaptchaSecret: process.env.RECAPTCHA_SECRET, 
+
 };
 
 console.log("verif smtp");

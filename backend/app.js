@@ -14,7 +14,7 @@ app.use(helmet());
 const allowedOrigins = [
   env.frontendUrl,
   "https://ajm-judoclub.onrender.com",
-  "http://localhost:5500",
+  "http://localhost:5000",
   "http://127.0.0.1:5500"
 ];
 
