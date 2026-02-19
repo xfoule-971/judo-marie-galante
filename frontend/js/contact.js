@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
       responseDiv.innerText = "Erreur lors de l'envoi.";
       responseDiv.classList.add("text-danger");
     }
-
+    
   });
 
 });
