@@ -50,10 +50,4 @@ app.get("/", (req, res) =>{
 });
 
 
-// --- Gestion erreur globale ---
-app.use((err, req, res, next) => { 
-  console.error(err.message); 
-  res.status(500).json({ message: "Erreur serveur" }); 
-});
-
 export default app;
