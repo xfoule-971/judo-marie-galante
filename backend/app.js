@@ -6,13 +6,13 @@ import { env } from "./config/env.js";
 
 const app = express(); 
 
-/* ========================= Sécurité de base ========================= */ 
+// --- Sécurité de base ---
 app.use(helmet()); 
 
-/* ========================= Parser JSON ========================= */ 
+// --- Parser JSON ---
 app.use(express.json()); 
 
-/* ========================= Configuration CORS ========================= */ 
+// --- Configuration CORS ---
 const allowedOrigins = [
   env.frontendUrl, // production
 ];
@@ -28,15 +28,19 @@ app.use(
         callback(new Error("Non autorisé par CORS"));
       }
     },
-    methods: ["POST"], 
+    methods: ["POST", "GET"], 
     credentials: true
   })
 );
 
-/* ========================= Route API ========================= */
+// --- Route API --- 
+app.get("/", (req, res) =>{
+  res.send('Serveur opérationnel')
+});
+
 app.use("/api/contact", contactRoutes);
 
-/* ========================= Gestion erreur globale ========================= */
+// --- Gestion erreur globale ---
 app.use((err, req, res, next) => { 
   console.error(err.message); 
   res.status(500).json({ message: "Erreur serveur" }); 
