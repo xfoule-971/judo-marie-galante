@@ -3,10 +3,13 @@ import { env } from "../config/env.js";
 
 export async function sendContactMail(req, res) {
   try {
-
     const { name, email, message } = req.body;
 
-    await transporter.sendMail({
+    console.log("Tentative envoi mail...");
+    console.log("SMTP USER:", env.smtp.user);
+    console.log("MAIL TO:", env.mailTo);
+
+    const info = await transporter.sendMail({
       from: `"Site Club Judo" <${env.smtp.user}>`,
       to: env.mailTo,
       replyTo: email,
@@ -20,15 +23,13 @@ ${message}
       `,
     });
 
-    return res.status(200).json({
-      message: "Message envoyé avec succès"
-    });
+    console.log("Mail envoyé :", info.response);
+
+    return res.status(200).json({ message: "Message envoyé avec succès" });
 
   } catch (error) {
-    console.error("Erreur envoi mail :", error);
-    return res.status(500).json({
-      error: "Erreur lors de l'envoi du message"
-    });
+    console.error("ERREUR COMPLETE SMTP:", error);
+    return res.status(500).json({ error: error.message });
   }
 }
 
