@@ -202,6 +202,12 @@ main {
     position: relative;
     z-index: 2;
 }
+/**/
+.send-me {
+    background-image: url("../assets/images/rock-zen.jpg");
+    background-position: center;
+    background-size: cover;
+}
 
 /*pages infos légales*/
 .infos {
