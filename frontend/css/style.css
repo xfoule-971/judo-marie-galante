@@ -217,26 +217,26 @@ main {
 .survol-foot{
     transition: color 0.3s ease;
 }
-
 .survol-foot a:hover {
     cursor: pointer;
     font-weight: bold;
     color: green;
 }
-
-
-/* Grossissement au survol */
+.survol-contact:hover{
+    cursor: pointer;
+    background-color: green;
+    font-weight: bolder;
+}
+/* survol des icônes */
 .icon-style i:hover {
     color: green;
     cursor: pointer;
-}
-.bout-style:hover {
-    background-color: green;
 }
 footer .survol-foot:hover {
     color: green !important;
     font-weight: 700;
 }
+
 
 /*footer*/
 footer {
