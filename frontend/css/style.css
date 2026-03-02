@@ -1,5 +1,3 @@
-
-
 body {
     padding-top: 2em;
     font-family: Arial, sans-serif;
@@ -8,6 +6,12 @@ body {
 .navigation {
     background-color: black;
 }
+
+/* Lien actif */
+.navbar .nav-link.active {
+    color: green;
+}
+
 main {
     margin: 0 auto;
 }
@@ -16,11 +20,11 @@ main {
 .hero {
     position: relative;
     background-image: url("../assets/images/hero-bg.jpg");
-    background-position: center;
+    background-position: start;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 100vh;
+    height: 70vh;
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -67,7 +71,7 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 50vh;
+    height: 40vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -198,6 +202,12 @@ main {
     position: relative;
     z-index: 2;
 }
+/**/
+.send-me {
+    background-image: url("../assets/images/rock-zen.jpg");
+    background-position: center;
+    background-size: cover;
+}
 
 /*pages infos légales*/
 .infos {
@@ -205,35 +215,36 @@ main {
 }
 
 /*les survols*/
+.bout-style:hover {
+    cursor: pointer;
+    background-color: green;
+}
 .survol-link:hover {
     cursor: pointer;
     font-weight: bold;
+    color: green;
 }
-.survol-contact:hover {
+.survol-foot{
+    transition: color 0.3s ease;
+}
+.survol-foot a:hover {
+    cursor: pointer;
+    font-weight: bold;
+    color: green;
+}
+.survol-contact:hover{
     cursor: pointer;
     background-color: green;
+    font-weight: bolder;
 }
-.survol-foot {
-    position: relative;
+/* survol des icônes */
+.icon-style i:hover {
+    color: green;
+    cursor: pointer;
 }
-.survol-foot::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    width: 0%;
-    height: 2px;
-    background-color: currentColor;
-    transition: width 0.3s ease;
-}
-.survol-foot:hover::after {
-    width: 100%;
-}
-.icon-style:hover img {
-    transform: scale(1.3);
-}
-.bout-style:hover {
-    background-color: green;
+footer .survol-foot:hover {
+    color: green !important;
+    font-weight: 700;
 }
 
 
